@@ -15,6 +15,7 @@ function get(path: string, options: GotApiOptions & GotJSONOptions) {
   opts.headers = {
     ...opts.headers,
     'X-Atlassian-Token': 'no-check',
+    Connection: 'keep-alive',
   };
   return got(url, opts);
 }
